@@ -1,0 +1,211 @@
+.portfolio h2 {
+    margin: 1rem 0;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 11.5rem;
+    width: 18rem;
+    position: relative;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+
+    border: .1rem solid var(--color-2);
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.portfolio-item::after {
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.portfolio-item:hover::after,
+.portfolio-item.video-playing::after {
+    display: none;
+}
+
+.portfolio-item h4 {
+    position: absolute;
+    background: none;
+    text-align: center;
+    z-index: 3;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.portfolio-item a {
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-item img,
+.portfolio-item video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .4rem;
+}
+
+.portfolio-item:hover h4,
+.portfolio-item.video-playing h4{
+    display: none;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.2);
+    transition: transform 4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.portfolio-content .arch-download {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: none;
+    text-align: center;
+    padding: .3rem;
+    z-index: 3;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.arch-project-page {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem;
+    z-index: 5;
+    background-color: var(--color-bg);
+    transform: translateX(100%);
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.arch-project-page.open-page {
+    transform: translateX(0);
+}
+
+.arch-project-page-content {
+    display: flex;
+    max-height: 100%;
+}
+
+.arch-description {
+    width: 25%;
+    padding-right: 1rem;
+    text-align: justify;
+}
+
+.gallery-container {
+    width: 75%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    width: 100%;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.close-btn {
+    position: fixed;
+    right:2rem;
+    top: 2rem;
+    z-index: 10;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: none;
+    border: none;   
+}
+
+.line-top,
+.line-bottom {
+    position: absolute;
+    width: 1.5rem;
+    height: .1rem;
+    top: 0;
+    left: 0;
+    background: var(--color-2);
+}
+
+.line-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.line-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+@media(max-width: 850px) {
+    .arch-project-page {
+        overflow: scroll;
+    }
+
+    .arch-project-page-content {
+        flex-direction: column;
+    }
+
+    
+    .arch-description {
+        width: 100%;
+        padding: 0 0 1rem 0;
+    }
+    
+    .gallery-container {
+        width: 100%;
+    }
+}
+
+@media(max-width: 550px) {
+    .portfolio-content {
+        justify-content: center;
+        align-items: center;
+    }
+}

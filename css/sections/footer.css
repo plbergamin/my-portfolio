@@ -1,0 +1,23 @@
+.footer {
+    min-height: auto;
+}
+
+.footnote p{
+    font-size: .8rem;
+    padding-top: .4rem;
+}
+.copywright{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copywright h3 {
+    font-size: 1.2rem;
+}
+
+.copywright p {
+    font-size: .85rem;
+}

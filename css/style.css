@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@200..800&display=swap');
+
+/* other css file imports */
+@import url("sections/menu.css");
+@import url("sections/home.css");
+@import url("sections/about.css");
+@import url("sections/portfolio.css");
+@import url("sections/skills.css");
+@import url("sections/contact.css");
+@import url("sections/footer.css");
+
+html{
+    scroll-behavior: smooth;
+  }
+
+:root {
+    --font-primary: "DM Serif Display", sans-serif;
+    --font-secondary: "Manrope", sans-serif;
+    --color-bg: #244855;
+    --color-1: #FBE9D0;
+    --color-2: #a7cac9;
+    --color-3: #18313a;
+}
+
+.darkmode {
+    --font-primary: "DM Serif Display", sans-serif;
+    --font-secondary: "Manrope", sans-serif;
+    --color-bg: #0f0f0f;
+    --color-1: #ededed;
+    --color-2: #ededed;
+    --color-3: #282828;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--color-bg);
+    color: var(--color-2);
+    transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-2);
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    color: var(--color-1);
+    letter-spacing: .15rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: var(--font-secondary);
+    background-color: var(--color-bg);
+    color: var(--color-2);
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+section {
+    position: relative;
+    min-height: 41rem;
+    max-width: calc(100vw - 34rem);
+    left: 30rem;
+    padding: 2rem;
+}
+
+@media(max-width: 1350px) {
+    section {
+        max-width: calc(100vw - 22rem);
+        left: 20rem;
+    }
+}
+
+@media(max-width: 1160px) {
+    section {
+        max-width: 100vw;
+        left: 0rem;
+    }
+}

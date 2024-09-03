@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro's Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <h4>Hi, I'm<br><a href="#about">Pedro Bergamin</a> Welcome to my page!</h4>
+        </div>
+        <ul>
+            <li class="menu-item active"><a href="#about">About</a><span></span></li>
+            <li class="menu-item"><a href="#portfolio">Portfolio</a><span></span></li>
+            <li class="menu-item"><a href="#skills">Skills</a><span></span></li>
+            <li class="menu-item"><a href="#contact">Contact</a><span></span></li>
+        </ul>
+        <i id="dark-mode-toggle-1">☼</i>
+        <i id="dark-mode-toggle-2">☾</i>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div id="overlay"></div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <button id="menu-btn" class="hamburger" type="button">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+    </button>
+
+    <section class="section about" id="about">
+        <div class="about-img-container">
+            <img src="./img/profile.jpeg" alt="profile">
+        </div>
+        <div class="about-content">
+            <h2 class="about-title">About me</h2>
+            <p>I am a web development enthusiast with a solid background in architecture. With six years of architectural experience, I have honed my skills in <b>design, problem-solving, and project management</b>.</p>
+            <p> Driven by a passion for technology, I embarked on a self-learning journey in <b>HTML, CSS, and JavaScript</b>. This transition has allowed me to blend my design sensibilities with technical expertise, creating visually appealing and user-friendly websites. In two months, I will be starting a comprehensive web development course to further enhance my skills.</p>
+            <p> My architectural experience includes working on diverse projects, from residential buildings to commercial and leisure spaces. I am proficient in tools like AutoCAD, Revit, and 3dsMax, which have sharpened my <b>attention to detail and creativity</b>.</p>
+            <p>I am excited to integrate my multidisciplinary background into web development, bringing innovative solutions to the IT field.</p> 
+            <h3>Thank you for visiting my portfolio!</h3> 
+        </div>
+    </section>
+
+    <section class="section portfolio" id="portfolio">
+        <div class="web-dev">
+            <div class="web-dev-title">
+                <h2>Web Development Projects</h2>
+            </div>
+            <div class="portfolio-content">
+                <div class="portfolio-item">
+                    <a href="https://github.com/plbergamin/Architect-Portfolio" target="_blank">
+                        <video muted loop class="video" src="/video/carina-portfolio.mp4"></video>
+                    </a>
+                    <h4>Architect Portfolio</h4>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://github.com/plbergamin/Travel-Adventure" target="_blank">
+                        <video muted loop class="video" src="/video/travel.mp4"></video>
+                    </a>
+                    <h4>Travel Adventure</h4>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://github.com/plbergamin/Luxora" target="_blank">
+                        <video muted loop class="video" src="/video/luxora.mp4"></video>
+                    </a>
+                    <h4>Luxora</h4>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://github.com/plbergamin/Lotus" target="_blank">
+                        <video muted loop class="video" src="/video/lotus.mp4"></video>
+                    </a>
+                    <h4>Lotus - Yoga Studio</h4>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://github.com/plbergamin/Matrix-AI" target="_blank">
+                        <video muted loop class="video" src="/video/matrix.mp4"></video>
+                    </a>
+                    <h4>Matrix AI</h4>
+                </div>
+            </div>
+        </div>
+        <div class="architecture-title">
+            <h2>Architecture - Selected Projects</h2>
+        </div>
+        <div class="portfolio-content">
+            <div class="portfolio-item arch-project">
+                <img src="./img/arch-1.jpg" alt="house">
+                <h4>House in São Paulo</h4>
+            </div>
+            <div class="arch-project-page">
+                <h2>House in Brazil</h2>
+                <button class="close-btn" type="button">
+                    <span class="line-top"></span>
+                    <span class="line-bottom"></span>
+                </button>
+                <div class="arch-project-page-content">
+                    <div class="arch-description">
+                        <p>This house is designed with a focus on the beautiful southern view that the plot offers. To fully embrace this connection, the residence is conceived as a series of small, asymmetrical boxes, supported by pillars, which create all the necessary living spaces in the most open and transparent way possible. These "boxes," which house the bedrooms, bathrooms, and garage, are completely white, featuring large windows, and are elevated above street level, resulting in an intriguing visual effect. The living room is enclosed in a glass cube, while the service areas are concealed within the natural topography.</p>
+                    </div>
+                    <div class="gallery-container">
+                        <button class="arrow left-arrow">&#10094;</button>
+                        <div class="gallery">
+                            <img src="img/house1.jpg" class="gallery-item">
+                            <img src="img/house2.jpg" class="gallery-item">
+                            <img src="img/house3.jpg" class="gallery-item">
+                            <img src="img/house4.jpg" class="gallery-item">
+                        </div>
+                        <button class="arrow right-arrow">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item arch-project">
+                <img src="./img/arch-2.jpg" alt="apartments">
+                <h4>Apartment buildings in Maceió</h4>
+            </div>
+            <div class="arch-project-page">
+                <h2>Apartment Building in Maceió</h2>
+                <button class="close-btn" type="button">
+                    <span class="line-top"></span>
+                    <span class="line-bottom"></span>
+                </button>
+                <div class="arch-project-page-content">
+                    <div class="arch-description">
+                        <p>The project stemmed from a fundamental concept of designing vertical houses that offer uninterrupted views of a captivating 15-meter seafront. Emphasizing a seamless integration with the natural landscape, theproject ensures an immersive experience for its residents. However, what sets this project apart is a visionary immediate that extends beyond the immediate site boundaries. Recognizing the potential of the expanding ingeniously city area, the project incorporates harmonious adjacent land to create a fusion of private dwellings and high-quality commercial services and public spaces.</p>
+                    </div>
+                    <div class="gallery-container">
+                        <button class="arrow left-arrow">&#10094;</button>
+                        <div class="gallery">
+                            <img src="img/apartment-building1.jpg" class="gallery-item">
+                            <img src="img/apartment-building2.jpg" class="gallery-item">
+                            <img src="img/apartment-building3.png" class="gallery-item">
+                        </div>
+                        <button class="arrow right-arrow">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item arch-project">
+                <img src="./img/arch-3.jpg" alt="office-building">
+                <h4>Office Building in Germany</h4>
+            </div>
+            <div class="arch-project-page">
+                <h2>Office Building in Germany</h2>
+                <button class="close-btn" type="button">
+                    <span class="line-top"></span>
+                    <span class="line-bottom"></span>
+                </button>
+                <div class="arch-project-page-content">
+                    <div class="arch-description">
+                        <p>This project is an extension of a previously constructed office building. The new design focuses on enhancing functionality and flexibility, incorporating modern open workspace concepts that promote collaboration and efficiency. The main façade has been reimagined to reflect a contemporary aesthetic, while the floorplan has been carefully organized to accommodate a greater number of workstations. In addition to the open work areas, the design includes well-appointed meeting rooms, rest areas, and technical rooms, ensuring a balanced environment that supports both productivity and employee well-being.</p>
+                    </div>
+                    <div class="gallery-container">
+                        <button class="arrow left-arrow">&#10094;</button>
+                        <div class="gallery">
+                            <img src="img/office-building1.jpg" class="gallery-item">
+                            <img src="img/office-building2.jpg" class="gallery-item">
+                            <img src="img/office-building3.jpg" class="gallery-item">
+                            <img src="img/office-building4.jpg" class="gallery-item">
+                        </div>
+                        <button class="arrow right-arrow">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <a class="arch-download" href="./img/PEDRO BERGAMIN - PORTFOLIO.pdf" download="PEDRO BERGAMIN - PORTFOLIO.pdf">Download complete architect portfolio here.</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section skills" id="skills">
+        <div class="dev-skills">
+            <div class="dev-skills-title">
+                <h2>Developer Skills</h2>
+            </div>
+            <div class="dev-skills-container">
+                <div class="dev-content-container">
+                    <div class="dev-skills-content active">
+                        <h3>HTML 5</h3>
+                        <ul>
+                            <li>Semantic HTML5 elements</li>
+                            <li>Form creation and validation</li>
+                            <li>Using HTML for SEO</li>
+                            <li>Accessible web development practices</li>
+                            <li>Embedding media (images, videos, audio)</li>
+                        </ul>
+                    </div>
+                    <div class="dev-skills-content">
+                        <h3>CSS 3</h3>
+                        <ul>
+                            <li>Responsive design with media queries</li>
+                            <li>Flexbox and Grid layout systems</li>
+                            <li>Animations and transitions</li>
+                            <li>CSS preprocessors like SASS</li>
+                            <li>CSS variables and custom properties</li>
+                        </ul>
+                    </div>
+                    <div class="dev-skills-content">
+                        <h3>JavaScript</h3>
+                        <ul>
+                            <li>ES6+ syntax and features</li>
+                            <li>DOM manipulation and event handling</li>
+                            <li>Asynchronous programming (Promises, async/await)</li>
+                            <li>Fetch API and AJAX</li>
+                            <li>JavaScript frameworks and libraries (e.g., jQuery)</li>
+                        </ul>
+                    </div>
+                    <div class="dev-skills-content">
+                        <h3>React</h3>
+                        <ul>
+                            <li>Component-based architecture</li>
+                            <li>State and props management</li>
+                            <li>React hooks (useState, useEffect, etc.)</li>
+                            <li>Routing with React Router</li>
+                            <li>State management with Redux or Context API</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dev-icons">
+                    <i class="icon fa-brands fa-html5 active"></i>
+                    <i class="icon fa-brands fa-css3-alt"></i>
+                    <i class="icon fa-brands fa-square-js"></i>
+                    <i class="icon fa-brands fa-react"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="design-skills">
+            <div class="design-skills-title">
+                <h2>Design Skills</h2>
+            </div>
+            <div class="design-skills-container">
+                <div class="design-skills-tabs">
+                    <h4 class="tab">Desing Thinking</h4>
+                    <h4 class="tab active">Technical Drawing and BIM</h4>
+                    <h4 class="tab">3D Modeling and Rendering</h4>
+                    <h4 class="tab">Management</h4>
+                </div>
+                <div class="design-content-container">
+                    <div class="design-skills-content active">
+                        <ul>
+                            <li>Empathy in understanding user needs and requirements</li>
+                            <li>Ideation techniques to generate creative solutions</li>
+                            <li>Prototyping to quickly test and iterate design ideas</li>
+                            <li>Integrating feedback into design improvements</li>
+                            <li>Applying design thinking principles to web user experience (UX)</li>
+                        </ul>
+                        <i class="fa-regular fa-lightbulb animated-lamp"></i>
+                    </div>
+                    <div class="design-skills-content">
+                        <ul>
+                            <li>Proficient in CAD software (AutoCAD, Revit, Archicad)</li>
+                            <li>Creation of detailed blueprints and technical drawings</li>
+                            <li>Building Information Modeling (BIM)</li>
+                            <li>Precision and accuracy in technical documentation</li>
+                            <li>Translating technical designs into web layouts with precision</li>
+                        </ul>
+                        <i class="fa-solid fa-pencil animated-pencil"></i>
+                    </div>
+                    <div class="design-skills-content">
+                        <ul>
+                            <li>Expertise in architectural visualization and 3D modeling</li>
+                            <li>Creating realistic renderings and animations</li>
+                            <li>Use of 3D software (3ds Max, SketchUp, Blender)</li>
+                            <li>Understanding of lighting, materials, and textures</li>
+                            <li>Application of 3D modeling skills in web development for interactive designs</li>
+                        </ul>
+                        <i class="fa-solid fa-cube animated-cube"></i>
+                    </div>
+                    <div class="design-skills-content">
+                        <ul>
+                            <li>Project management of multiple projects simultaneously</li>
+                            <li>Experience in managing design workflows and timelines</li>
+                            <li>Collaborative skills for working with cross-functional teams</li>
+                            <li>Coordination of different disciplines (Structure, M&E, Lanscape)</li>
+                            <li>Strong problem-solving skills and innovative thinking</li>
+                        </ul>
+                        <i class="fa-solid fa-list-check animated-checklist"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="contact-title">
+            <h2>Contact</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-description">
+                <p>Thank you for your interest in my journey so far! I will keep learning and updating this website.</p>
+                <p>You can reach me at:</p>
+                <div class="contact-icons">
+                    <a href="https://github.com/plbergamin" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:pedro_bergamini@hotmail.com" ><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://wa.me/353833122666" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/pedro-bergamin/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-img">
+                <img src="./img/profile2.jpeg" alt="profile">
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer">
+        <div class="footnote">
+            <p>This website was designed and coded by myself using Visual Studio Code. It was built with HTML, CSS, and JavaScript.</p>
+            <p>The Web Development projects showcase my personal creations as I progressed through my learning journey.</p>
+        </div>
+        <div class="copywright">
+            <h3><a href="#top">Pedro <span>Bergamin</span></a></h3>
+            <p>&copy; 2024</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

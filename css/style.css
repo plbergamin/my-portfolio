@@ -39,6 +39,7 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -95,4 +96,7 @@ section {
         max-width: 100vw;
         left: 0rem;
     }
+}
+
+@media (hover: none) and (pointer: coarse) {
 }

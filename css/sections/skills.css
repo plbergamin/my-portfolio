@@ -75,14 +75,6 @@
 
 /* Design Skills */
 
-.design-skills {
-    position: relative;
-}
-
-.design-skills-title {
-    margin: 1rem 0;
-}
-
 .design-skills-container {
     display: flex;
     flex-direction: column;
@@ -102,30 +94,46 @@
     width: 100%;
 }
 
-.design-skills-tabs h4 {
+.design-skills-tabs .tab {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     background: none;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 400;
     padding: 0 .5rem;
     text-align: center;
     cursor: pointer;
 }
 
-.design-skills-tabs h4:first-child {
+.design-skills-tabs .tab:first-child {
     border-top-left-radius: 1rem;
 }
 
-.design-skills-tabs h4:last-child {
+.design-skills-tabs .tab:last-child {
     border-top-right-radius: 1rem;
 }
 
 .design-skills-tabs .active {
     background: var(--color-3);
+}
+
+.design-skills-tabs .tab:first-child.active i {
+    animation: pulse-glow 2s infinite;
+}
+
+.design-skills-tabs .tab:nth-child(2).active i {
+    animation: pencil-draw 2s infinite;
+}
+
+.design-skills-tabs .tab:nth-child(3).active i {
+    animation: spin-sideways 3s infinite;
+}
+
+.design-skills-tabs .tab:last-child.active i {
+    animation: checkmark 2s infinite;
 }
 
 .design-content-container {
@@ -134,11 +142,11 @@
 
 .design-skills-content {
     display: none;
-    margin-left: 1rem;
 }
 
 .design-skills-content ul{
     overflow-wrap: break-word;
+    padding: 1rem;
 }
 
 .design-skills-content ul li {
@@ -147,30 +155,7 @@
 
 .design-skills-content.active {
     display: flex;
-}
-
-.design-skills-content i {
-    position: absolute;
-    font-size: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-}
-
-.animated-lamp {
-    animation: pulse-glow 2s infinite;
-}
-
-.animated-pencil {
-    animation: pencil-draw 1.5s ease-in-out infinite;
-}
-
-.animated-cube {
-    perspective: 80rem;
-    animation: spin-sideways 4s linear infinite;
-}
-
-.animated-checklist {
-    animation: checkmark 4s ease-in-out infinite;
+    flex-direction: column;
 }
 
 @keyframes pulse-glow {
@@ -237,7 +222,7 @@
     .design-skills-container {
         flex-direction: row;
         align-items: flex-start;
-        gap: 2rem;
+        gap: .5rem;
     }
 
     .design-skills-tabs {
@@ -245,36 +230,63 @@
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        width: 9rem;
+        width: 5rem;
         cursor: pointer;
         border-radius: 1rem 0 0 1rem;
         padding: 0;
     }
 
-    .design-skills-tabs h4 {
+    .design-skills-tabs .tab {
         align-items: center;
-        justify-content: stretch;
         cursor: pointer;
-        width: 9rem;
+        width: 5rem;
     }
 
-    .design-skills-tabs h4:first-child {
+    .design-skills-tabs .tab:first-child {
         border-top-left-radius: 1rem;
     }
     
-    .design-skills-tabs h4:last-child {
+    .design-skills-tabs .tab:last-child {
         border-top-right-radius: 0;
         border-bottom-left-radius: 1rem;
     }
 }
 
 @media(max-width: 550px) {
-    .dev-skills-container {
-        height: 32rem;
+    .dev-icons i {
+        font-size: 3rem;
+        width: 3rem;
+        bottom: .5rem;
+    }
+
+    .dev-skills-container{
+        gap: .5rem;
+    }
+
+    .dev-icons .active {
+        left: 3rem;
+        top: -12rem;
+        font-size: 6rem;
     }
     
     .design-skills-container {
         height: 40rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .dev-skills-container{
+        height: 26rem;
+    }
+
+    .dev-content-container {
+        padding-left: 8rem;
+    }
+
+    .dev-icons .active {
+        left: 3rem;
+        top: -18rem;
+        font-size: 6rem;
     }
 }
 

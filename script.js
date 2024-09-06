@@ -136,30 +136,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to handle the video playback
     function playVideoInMiddle() {
-        let closestVideo = null;
-        let minDistance = Infinity;
+        if (window.innerWidth <= screenThreshold) {
+            let closestVideo = null;
+            let minDistance = Infinity;
 
-        videos.forEach(video => {
-            const distance = getDistanceFromCenter(video);
-            if (distance < minDistance) {
-                minDistance = distance;
-                closestVideo = video;
+            videos.forEach(video => {
+                const distance = getDistanceFromCenter(video);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestVideo = video;
+                }
+                // Pause all videos initially and remove the 'playing' class
+                video.pause();
+                video.currentTime = 0;
+                video.closest('.portfolio-item').classList.remove('video-playing');
+            });
+
+            // Play the video closest to the center of the viewport and add the 'playing' class
+            if (closestVideo) {
+                closestVideo.play();
+                closestVideo.closest('.portfolio-item').classList.add('video-playing');
             }
-            // Pause all videos initially and remove the 'playing' class
-            video.pause();
-            video.currentTime = 0;
-            video.closest('.portfolio-item').classList.remove('video-playing');
-        });
-
-        // Play the video closest to the center of the viewport and add the 'playing' class
-        if (closestVideo) {
-            closestVideo.play();
-            closestVideo.closest('.portfolio-item').classList.add('video-playing');
         }
     }
+
+    // Check screen width and add the scroll event listener only for small screens
+    if (window.innerWidth <= screenThreshold) {
         window.addEventListener('scroll', playVideoInMiddle);
         playVideoInMiddle();
+    }
+
+    // Optional: Listen for window resize events to apply the behavior dynamically on screen size changes
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= screenThreshold) {
+            playVideoInMiddle();
+            window.addEventListener('scroll', playVideoInMiddle);
+        } else {
+            window.removeEventListener('scroll', playVideoInMiddle);
+        }
+    });
 });
+
   
 /* Architecture portfolio open page */
 

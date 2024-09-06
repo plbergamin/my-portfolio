@@ -75,6 +75,10 @@
 
 /* Design Skills */
 
+.design-skills h2{
+    margin: 1rem 0;
+}
+
 .design-skills-container {
     display: flex;
     flex-direction: column;
@@ -260,6 +264,7 @@
     }
 
     .dev-skills-container{
+        height: 28rem;
         gap: .5rem;
     }
 
@@ -276,7 +281,7 @@
 
 @media(max-width: 500px) {
     .dev-skills-container{
-        height: 26rem;
+        height: 30rem;
     }
 
     .dev-content-container {

@@ -190,6 +190,10 @@
 }
 
 @media(max-width: 850px) {
+    .portfolio-content .active {
+        height: 25rem;
+    }
+
     .arch-project-page {
         overflow: scroll;
     }
@@ -215,18 +219,18 @@
         align-items: center;
     }
 
+    .portfolio-item,
+    .portfolio-content .active {
+        width: 100%;
+        height: 12rem
+    }
+
     .portfolio-item.active::after {
         display: block;
     }
 
     .portfolio-item.active h4{
         display: block;
-    }
-
-    .portfolio-content .active {
-        order: -1;
-        height: 11.5rem;
-        width: 18rem;
     }
 
     .portfolio-item.video-playing::after {

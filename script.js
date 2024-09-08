@@ -103,24 +103,80 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })();
 
-/* Play portfolio videos on hover*/
+/* Play portfolio videos*/
 
-document.addEventListener('DOMContentLoaded', function () {
-    const videos = document.querySelectorAll('.portfolio-item .video');
-  
-    videos.forEach(video => {
-      video.addEventListener('mouseover', () => {
-        video.play();
-      });
-  
-      video.addEventListener('mouseout', () => {
-        video.pause();
-        video.currentTime = 0;
-      });
+const DevPortfolioItem = document.querySelectorAll('.portfolio-item.dev');
+
+// Add click event listeners to all relevant portfolio items (only for screens > 550px)
+if (window.matchMedia("(min-width: 550px)").matches) {
+    DevPortfolioItem.forEach((item) => {
+        item.addEventListener('click', () => {
+            removeActives(); // Remove 'active' class from all items and stop all videos
+            item.classList.add('active'); // Add 'active' class to the clicked item
+
+            const video = item.querySelector('.video'); // Get the video inside the clicked item
+            if (video) {
+                video.play(); // Play the video of the clicked item
+                
+                // Scroll to the active item smoothly
+                item.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Adjust scroll position to be 4rem above
+                setTimeout(() => {
+                    const remInPixels = parseFloat(getComputedStyle(document.documentElement).fontSize); // Get the size of 1rem in pixels
+                    window.scrollBy({ top: -4 * remInPixels, behavior: 'smooth' }); // Scroll 4rem above the top of the element
+                }, 500); // Small delay to ensure the scrollIntoView completes
+            }
+        });
     });
-  });
 
-/* Play portfolio videos basaed on screen position for small screens*/
+    // Intersection Observer to detect when the active video enters the viewport
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const activeItem = entry.target; // The portfolio item that is currently active
+                const video = activeItem.querySelector('.video'); // Get the video inside the active item
+                if (video && activeItem.classList.contains('active')) {
+                    video.play(); // Play the video if it's active and in the viewport
+                }
+            }
+        });
+    }, { threshold: 0.5 }); // 0.5 means video will start playing when 50% of it is visible
+
+    // Observe only the portfolio items that have a video and are initially active
+    DevPortfolioItem.forEach((item) => {
+        if (item.classList.contains('active')) {
+            observer.observe(item); // Start observing the initially active item
+        }
+    });
+}
+
+// Function to remove 'active' class from all items and stop/reset videos
+function removeActives() {
+    DevPortfolioItem.forEach((item) => {
+        item.classList.remove('active'); // Remove 'active' class from all items
+        const video = item.querySelector('.video'); // Get the video in each item
+        if (video) {
+            video.pause(); // Pause the video
+            video.currentTime = 0; // Reset the video to the start
+        }
+    });
+}
+
+
+// Function to remove 'active' class from all items and stop/reset videos
+function removeActives() {
+    DevPortfolioItem.forEach((item) => {
+        item.classList.remove('active'); // Remove 'active' class from all items
+        const video = item.querySelector('.video'); // Get the video in each item
+        if (video) {
+            video.pause(); // Pause the video
+            video.currentTime = 0; // Reset the video to the start
+        }
+    });
+}
+
+/* Play portfolio videos based on screen position for small screens*/
 
 document.addEventListener('DOMContentLoaded', function () {
     const videos = document.querySelectorAll('.portfolio-item .video');

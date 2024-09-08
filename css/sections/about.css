@@ -1,7 +1,15 @@
+.header {
+    display: none;
+}
+
 .about {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+}
+
+.about .logo {
+    display: none;
 }
 
 .about-img-container {
@@ -35,6 +43,28 @@ b {
     font-weight: 300;
 }
 
+
+@media(max-width: 1160px){
+    .header {
+        display: block;
+        padding: 2rem 2rem 0 2rem;
+    }
+    .header h4{
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        letter-spacing: .15rem;
+        font-weight: 400;
+    }
+    
+    .header h4 a {
+        font-family: var(--font-primary);
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--color-bg);
+        background-color: rgba(255, 255, 255, .3);
+        padding: 0 .5rem;
+    }
+}
 
 @media(max-width: 850px) {
     .about {
